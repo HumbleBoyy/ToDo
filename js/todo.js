@@ -1,6 +1,7 @@
 let elTodoForm = document.querySelector(".todo_form")
 let elTodoInput = document.querySelector(".todo_input")
 let elTodoList = document.querySelector(".todo_list")
+let isEdit = false
 
 let todosList = []
 
@@ -29,12 +30,21 @@ function renderTodos(arr, list){
              </div>
              <div class="flex justify-between items-center gap-7">
                  <button title="Check"><i class="fa-solid fa-circle-check text-[2.5rem] text-green-600"></i></button>
-                 <button title="Edit"><i class="fa-solid fa-pen-to-square text-[2.5rem] text-blue-600"></i></button>
-                 <button title="Delete"><i class="fa-regular fa-trash-can text-[2.5rem] text-red-600"></i></button>
+                 <button onclick="handleEdit()" title="Edit"><i class="fa-solid fa-pen-to-square text-[2.5rem] text-blue-600"></i></button>
+                 <button title="Delete"><i class="delete_btn fa-regular fa-trash-can text-[2.5rem] text-red-600"></i></button>
              </div>
         `
+        elItem.querySelector(".delete_btn").addEventListener("click", ()=> {
+            arr.splice(index, 1)
+            renderTodos(arr, list)
+        })
         list.append(elItem)
     })
 }
 
 
+function handleEdit(id){
+    const findObj = todosList.find(item => item.id === id)
+    elTodoInput.value = findObj.title
+    isEdit = true
+}
