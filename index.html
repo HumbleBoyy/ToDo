@@ -21,9 +21,10 @@
 </head>
 <body>
 
-    <header class="flex justify-between items-center p-10 bg-slate-600 sticky w-full top-0">
-        <div>
-           <h1 class="text-[3rem] font-bold text-white">ToDo <span class="text-red-500">App</span></h1>
+    <header class="flex justify-between items-center p-10 bg-slate-800 sticky w-full top-0">
+        <div class="flex items-center gap-2">
+            <i class="fa-solid fa-clipboard-list text-[3rem] text-blue-600"></i>
+           <h1 class="text-[3rem] font-bold text-white">ToDo <span class="text-red-600">App</span></h1>
         </div>
         <form  class="todo_form flex justify-center items-center gap-2 bg-white rounded-md">
             <input type="text" placeholder="Add things to do...." required class="todo_input enabled:hover:border-gray-400 disabled:opacity-75 ... w-[400px] h-[40px] outline-none text-[1.7rem] p-2" >
@@ -37,7 +38,7 @@
     </header>
 
     
-    <ul class="todo_list  mt-10  rounded-md overflow-y-scroll">
+    <ul class="todo_list  mt-10  rounded-md h-[100vh] overflow-y-scroll">
         
     </ul>
     

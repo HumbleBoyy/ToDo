@@ -18,7 +18,7 @@ elTodoForm.addEventListener("submit", (event)=> {
 })
 
 function renderTodos(arr, list){
-    list.innerHTML = ""
+    list.innerHTML = null
     arr.map((item,index)=> {
         let elItem = document.createElement("li")
         elItem.className = "flex justify-between bg-white mt-2  w-[600px] p-5  mx-auto rounded-md items-center text-[1.7rem]"
@@ -28,11 +28,13 @@ function renderTodos(arr, list){
                 <strong class="truncate">${item.taskTitle}</strong>
              </div>
              <div class="flex justify-between items-center gap-7">
-                 <button title="Delete"><i class="fa-solid fa-circle-check text-[2.5rem] text-green-600"></i></button>
-                 <button title="Delete"><i class="fa-solid fa-pen-to-square text-[2.5rem] text-blue-600"></i></button>
+                 <button title="Check"><i class="fa-solid fa-circle-check text-[2.5rem] text-green-600"></i></button>
+                 <button title="Edit"><i class="fa-solid fa-pen-to-square text-[2.5rem] text-blue-600"></i></button>
                  <button title="Delete"><i class="fa-regular fa-trash-can text-[2.5rem] text-red-600"></i></button>
              </div>
         `
         list.append(elItem)
     })
 }
+
+
