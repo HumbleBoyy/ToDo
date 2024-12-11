@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,6 +20,23 @@
     <title>TO-DO APP</title>
 </head>
 <body>
+
+    <header class="flex justify-between items-center p-10 bg-slate-500">
+        <div>
+           <h1 class="text-[3rem] font-bold text-white">ToDo <span class="text-red-500">App</span></h1>
+        </div>
+        <div class="flex justify-center items-center gap-2 bg-white rounded-md">
+            <input type="text" placeholder="Add things to do...." class="enabled:hover:border-gray-400 disabled:opacity-75 ... w-[400px] h-[40px] outline-none text-[1.7rem] p-2" >
+            <button class="w-[20%] h-[50px] bg-green-600 text-[1.7rem] text-white hover:bg-green-500"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="flex justify-between items-center text-[1.7rem] rounded-md w-[30%] h-45px">
+            <button class="w-[100%] h-[45px] bg-blue-600 text-white">All (0)</button>
+            <button class="w-[100%] h-[45px] bg-green-600 text-white">Completed (0)</button>
+            <button class="w-[100%] h-[45px] bg-red-600 text-white">Uncompleted(0)</button>
+        </div>
+    </header>
+
+    
     
 
     <script src="./js/app.js"></script>
