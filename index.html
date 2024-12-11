@@ -25,11 +25,11 @@
         <div>
            <h1 class="text-[3rem] font-bold text-white">ToDo <span class="text-red-500">App</span></h1>
         </div>
-        <div class="flex justify-center items-center gap-2 bg-white rounded-md">
-            <input type="text" placeholder="Add things to do...." class="enabled:hover:border-gray-400 disabled:opacity-75 ... w-[400px] h-[40px] outline-none text-[1.7rem] p-2" >
-            <button class="w-[20%] h-[50px] bg-green-600 text-[1.7rem] text-white hover:bg-green-500"><i class="fa-solid fa-plus"></i></button>
-        </div>
-        <div class="flex justify-between items-center text-[1.7rem] rounded-md w-[30%] h-45px">
+        <form  class="todo_form flex justify-center items-center gap-2 bg-white rounded-md">
+            <input type="text" placeholder="Add things to do...." class="todo_input enabled:hover:border-gray-400 disabled:opacity-75 ... w-[400px] h-[40px] outline-none text-[1.7rem] p-2" >
+            <button type="submit" class="w-[20%] h-[50px] bg-green-600 text-[1.7rem] text-white hover:bg-green-500"><i class="fa-solid fa-plus"></i></button>
+        </form>
+        <div class="flex justify-between items-center text-[1.7rem] w-[30%] h-45px">
             <button class="w-[100%] h-[45px] bg-blue-600 text-white">All (0)</button>
             <button class="w-[100%] h-[45px] bg-green-600 text-white">Completed (0)</button>
             <button class="w-[100%] h-[45px] bg-red-600 text-white">Uncompleted(0)</button>
@@ -37,8 +37,22 @@
     </header>
 
     
+    <ul class="todo_list bg-white w-[600px] mx-auto mt-10 p-5 rounded-md">
+        <li class="flex justify-between items-center text-[1.7rem]">
+            <div class="flex items-cente gap2 text-[2.2rem] text-ellipsis overflow-hidden">
+                <span>1. </span>
+                <strong class="truncate">Task should be donesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</strong>
+             </div>
+             <div class="flex justify-between items-center gap-7">
+                 <button title="Delete"><i class="fa-solid fa-circle-check text-[2.5rem] text-green-600"></i></button>
+                 <button title="Delete"><i class="fa-solid fa-pen-to-square text-[2.5rem] text-blue-600"></i></button>
+                 <button title="Delete"><i class="fa-regular fa-trash-can text-[2.5rem] text-red-600"></i></button>
+             </div>
+        </li>
+    </ul>
     
 
-    <script src="./js/app.js"></script>
+    <script src="./js/todo.js"></script>
+    <!-- <script src="./js/app.js"></script> -->
 </body>
 </html>
