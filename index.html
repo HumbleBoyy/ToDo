@@ -28,18 +28,17 @@
         </div>
         <form  class="todo_form flex justify-center items-center gap-2 bg-white rounded-md">
             <input type="text" placeholder="Add things to do...." required class="todo_input enabled:hover:border-gray-400 disabled:opacity-75 ... w-[400px] h-[40px] outline-none text-[1.7rem] p-2" >
-            <button type="submit" class="w-[20%] h-[50px] bg-green-600 text-[1.7rem] text-white hover:bg-green-500"><i class="fa-solid fa-plus"></i></button>
+            <button type="submit" class="btn_update w-[20%] h-[50px] bg-green-600 text-[1.7rem] text-white hover:bg-green-500"><i class="fa-solid fa-plus"></i></button>
         </form>
-        <div class="flex justify-between items-center text-[1.7rem] w-[30%] h-45px">
-            <button class="w-[100%] h-[45px] bg-blue-600 text-white">All (0)</button>
-            <button class="w-[100%] h-[45px] bg-green-600 text-white">Completed (0)</button>
-            <button class="w-[100%] h-[45px] bg-red-600 text-white">Uncompleted(0)</button>
+        <div class="btn_wrappers flex justify-between items-center text-[1.8rem] w-[30%] h-45px">
+            <button class="all_btn  w-[100%] h-[45px] bg-blue-600 text-white">All (<span>0</span>)</button>
+            <button class="all_done_btn  w-[100%] h-[45px] bg-green-600 text-white">Completed (<span>0</span>)</button>
+            <button class="all_uncompleted_btn w-[100%] h-[45px] bg-red-600 text-white">Uncompleted (<span>0</span>)</button>
         </div>
     </header>
 
     
     <ul class="todo_list  mt-10  rounded-md h-[100vh] overflow-y-scroll">
-        
     </ul>
     
 
