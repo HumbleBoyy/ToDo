@@ -38,9 +38,9 @@ function renderTodos(arr, list){
     list.innerHTML = null
     arr.map((item,index)=> {
         let elItem = document.createElement("li")
-        elItem.className = `flex justify-between bg-white mt-2  w-[600px] p-5  mx-auto rounded-md items-center text-[1.7rem] ${item.isCompleted ? "bg-gray-800 line-through text-white" : ""}`
+        elItem.className = `flex justify-between bg-white mt-2  w-[600px] p-5  mx-auto rounded-md  items-center text-[1.7rem] ${item.isCompleted ? "bg-gray-800 line-through text-white" : ""}`
         elItem.innerHTML = `
-            <div class="flex items-cente gap-2 text-[2.2rem] text-ellipsis">
+            <div class="flex items-cente gap-2 text-[2.2rem] text-ellipsis overflow-hidden">
                 <span>${index + 1}) </span>
                 <strong class="truncate">${item.taskTitle}</strong>
              </div>
