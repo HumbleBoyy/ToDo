@@ -26,7 +26,7 @@ elTodoForm.addEventListener("submit", (event)=> {
         todosList.push(data)
     }
     event.target.reset()
-    location.reload()
+    isEdit = false
     renderTodos(todosList, elTodoList)
     localStorage.setItem("todos", JSON.stringify(todosList))
 })
